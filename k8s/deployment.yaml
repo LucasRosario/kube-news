@@ -53,7 +53,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: rosariolucas/kube-news2023:v2
+          image: rosariolucas/kube-news2023:{{TAG}}
           ports:
           - containerPort: 8080
           env:
@@ -77,5 +77,4 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
